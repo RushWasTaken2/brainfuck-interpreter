@@ -7,7 +7,7 @@
 int main(int argc, char *argv[]) {
 
     if (argc < 2){
-        printf("usage: brainfuck path/to/the/program.bf");
+        printf("usage: brainfuck path/to/the/program.bf\n");
         return 1;
     }
 
