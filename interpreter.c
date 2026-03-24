@@ -7,13 +7,14 @@
 int main(int argc, char *argv[]) {
 
     if (argc < 2){
-        printf("enter a brainfuck file");
+        printf("usage: brainfuck path/to/the/program.bf");
         return 1;
     }
 
     FILE *file = fopen(argv[1], "r");
+
     if (!file) {
-        printf("file foundn't");
+        printf("missing file, \"%s\".\n", argv[1]);
         return 1;
     }
 
@@ -56,7 +57,7 @@ int main(int argc, char *argv[]) {
                 break;
         }
     }
-
+    puts("\n");
     fclose(file);
     free(memory);
     return 0;
