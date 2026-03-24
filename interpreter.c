@@ -57,7 +57,6 @@ int main(int argc, char *argv[]) {
                 break;
         }
     }
-    puts("\n");
     fclose(file);
     free(memory);
     return 0;
